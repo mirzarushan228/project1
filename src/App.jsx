@@ -1,11 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { useState } from 'react';
+import './App.css';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+function App() {
+  const [count, setCount] = useState(0);
 
+  return (
+    <div className="App">
+      <h1>Welcome to My React App</h1>
+      <p>Click the button below to test interactive state.</p>
+      
+      <button onClick={() => setCount((prev) => prev + 1)}>
+        Count is: {count}
+      </button>
+    </div>
+  );
+}
+
+export default App;
