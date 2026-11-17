@@ -1,0 +1,247 @@
+.family-page {
+  --family-ink: #25352d;
+  --family-muted: #69756e;
+  --family-paper: #f7f5ef;
+  --family-green: #315d49;
+
+  width: 100%;
+  min-height: 100svh;
+  color: var(--family-ink);
+  background: var(--family-paper);
+  text-align: left;
+  font-family: var(--sans);
+}
+
+.family-header,
+.family-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px clamp(22px, 7vw, 88px);
+}
+
+.family-header {
+  border-bottom: 1px solid rgba(37, 53, 45, 0.1);
+}
+
+.family-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--family-ink);
+  font-size: 15px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.family-brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--family-green);
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.family-nav-link {
+  color: var(--family-ink);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.family-nav-link:hover,
+.family-brand:hover {
+  color: var(--family-green);
+}
+
+.family-hero {
+  display: grid;
+  min-height: 470px;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px clamp(22px, 10vw, 130px);
+}
+
+.family-hero-copy {
+  max-width: 550px;
+}
+
+.family-eyebrow {
+  margin: 0 0 16px;
+  color: var(--family-green);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.family-hero h1 {
+  margin: 0;
+  color: var(--family-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.family-intro {
+  max-width: 440px;
+  margin-top: 22px;
+  color: var(--family-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.family-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  padding: 13px 19px;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--family-green);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.family-button:hover {
+  transform: translateY(-2px);
+  background: #254936;
+}
+
+.family-art {
+  position: relative;
+  display: grid;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: center;
+  border-radius: 50%;
+  background: #e7e9dc;
+}
+
+.family-art::before,
+.family-art::after {
+  position: absolute;
+  border: 1px solid rgba(49, 93, 73, 0.25);
+  border-radius: 50%;
+  content: '';
+}
+
+.family-art::before {
+  inset: 9%;
+}
+
+.family-art::after {
+  inset: 18%;
+}
+
+.family-art-sun {
+  position: absolute;
+  top: 16%;
+  right: 20%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #d6a86f;
+}
+
+.family-art-letter {
+  color: var(--family-green);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(100px, 16vw, 180px);
+  line-height: 1;
+}
+
+.family-art-caption {
+  position: absolute;
+  bottom: 17%;
+  color: var(--family-muted);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.family-section {
+  padding: 68px clamp(22px, 10vw, 130px) 84px;
+  background: #fff;
+}
+
+.family-section-heading {
+  text-align: center;
+}
+
+.family-section-heading .family-eyebrow {
+  margin-bottom: 10px;
+}
+
+.family-section h2 {
+  margin: 0;
+  color: var(--family-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.family-empty-state {
+  max-width: 560px;
+  margin: 36px auto 0;
+  padding: 34px 24px;
+  border: 1px dashed #cbd4c8;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.family-empty-icon {
+  color: #b98952;
+  font-size: 25px;
+}
+
+.family-empty-state h3 {
+  margin: 12px 0 8px;
+  color: var(--family-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.family-empty-state p {
+  color: var(--family-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.family-footer {
+  color: var(--family-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .family-hero {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .family-hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .family-art {
+    width: min(78vw, 300px);
+  }
+
+  .family-section {
+    padding-top: 54px;
+    padding-bottom: 60px;
+  }
+}
